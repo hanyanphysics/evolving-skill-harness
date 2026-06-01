@@ -31,7 +31,7 @@ A future session-end review may ask:
 
 ## Desired future skill-revision notice
 
-If future local-only hooks are added, they may help remind Codex to display this notice whenever a global skill under `skills/` is added, edited, or revised:
+If future local-only hooks are added, they may help remind Codex to display this notice whenever reusable skill behavior changes under `skills/**` or `~/.codex/skills/**`:
 
 ```text
 +------------------------------------------------------------+
@@ -40,6 +40,8 @@ If future local-only hooks are added, they may help remind Codex to display this
 | [Description of the skill]                                 |
 +------------------------------------------------------------+
 ```
+
+The reminder should trigger after creating, editing, revising, deleting, renaming, validating, or promoting a global skill, including changes to skill metadata, validation logic, or instructions.
 
 ## Constraint
 

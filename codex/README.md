@@ -14,7 +14,7 @@ The current approach is manual:
 
 ## Global skill revision notice
 
-When Codex adds, edits, or revises a global skill under `skills/`, the project conversation should make that change highly visible with this ASCII box:
+When Codex changes reusable skill behavior, the project conversation must make that change highly visible with this ASCII box:
 
 ```text
 +------------------------------------------------------------+
@@ -23,5 +23,9 @@ When Codex adds, edits, or revises a global skill under `skills/`, the project c
 | [Description of the skill]                                 |
 +------------------------------------------------------------+
 ```
+
+This applies after creating, editing, revising, deleting, renaming, validating, or promoting a global skill under `skills/**` or a local Codex skill under `~/.codex/skills/**`.
+
+If the skill was changed rather than newly created, write "added or revised" in the path line.
 
 Future versions may add local-only startup or session-end hook behavior.

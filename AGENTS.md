@@ -60,7 +60,16 @@ If the user corrects the agent, the correction may later be recorded in a skill,
 
 ## Global skill revision notice
 
-Whenever a global skill file under `skills/` is added, edited, or revised, the Codex project conversation must include a very visible ASCII box in the final response.
+Whenever reusable skill behavior changes, the Codex project conversation must include a very visible ASCII box in the final response.
+
+This applies when Codex creates, edits, revises, deletes, renames, validates, or promotes a global skill under:
+
+```text
+skills/**
+~/.codex/skills/**
+```
+
+It also applies when skill metadata, validation logic, or skill instructions change.
 
 Use this format:
 
@@ -72,7 +81,16 @@ Use this format:
 +------------------------------------------------------------+
 ```
 
-Use the actual skill path and a concise description of what the skill now teaches.
+Use the actual skill path and a concise description of what the skill now teaches. If the skill was changed rather than newly created, write "added or revised" in the path line.
+
+Before sending the final response, check:
+
+```text
+Did I modify any file under skills/** or ~/.codex/skills/**?
+Did I change reusable skill behavior, metadata, validation, or instructions?
+```
+
+If either answer is yes, include the ASCII box near the end of the final response after the concrete work summary and verification results.
 
 ## Scientific rigor
 

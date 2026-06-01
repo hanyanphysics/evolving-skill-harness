@@ -32,7 +32,7 @@ Do not add substantive skill content unless the user explicitly asks.
 
 ## Revision notice
 
-Whenever a global skill in this directory is added, edited, or revised, Codex must report it in the project conversation with a visible ASCII box:
+Whenever reusable skill behavior in this directory is added, edited, revised, deleted, renamed, validated, or promoted, Codex must report it in the project conversation with a visible ASCII box:
 
 ```text
 +------------------------------------------------------------+
@@ -42,4 +42,6 @@ Whenever a global skill in this directory is added, edited, or revised, Codex mu
 +------------------------------------------------------------+
 ```
 
-Use the real path and a concise description of the added or revised skill.
+Use the real path and a concise description of the added or revised skill. If the skill was changed rather than newly created, write "added or revised" in the path line.
+
+Before the final response, check whether any file under `skills/**` changed reusable skill behavior, metadata, validation, or instructions. If yes, include the box.
